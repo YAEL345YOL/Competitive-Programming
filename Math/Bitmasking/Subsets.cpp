@@ -22,7 +22,5 @@ void bitmaskSubsets(ll n){
 }
 
 int main(){
-
     bitmaskSubsets(10);
-    
 }
