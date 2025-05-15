@@ -1,3 +1,5 @@
+//#define ll long long
+
 ll fpow(ll b, ll e, ll m){
     ll r = 1;
     b %= m;
