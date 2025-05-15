@@ -1,4 +1,4 @@
-const ll N;
+const ll N = 1e6;
 vector<bool>prime;
 vector<ll>primes;
 
