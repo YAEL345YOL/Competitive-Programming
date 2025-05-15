@@ -1,4 +1,4 @@
-const ll N;
+const ll N = 50;
 vector<vector<ll>>matrix;
 
 void pascal(){
