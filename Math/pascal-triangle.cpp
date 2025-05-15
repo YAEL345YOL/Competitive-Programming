@@ -1,3 +1,4 @@
+const ll N;
 vector<vector<ll>>matrix;
 
 void pascal(){
