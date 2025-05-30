@@ -1,2 +1,2 @@
-# Competitive-Programming 
-Incluyen implementaciones en C y C++
+# Competitive-Programming
+Códigos y estructuras comunes 
