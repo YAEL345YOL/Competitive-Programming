@@ -1,3 +1,4 @@
+// next strictly smaller value
 void monotonic_stack(vector<ll>&a){
     ll n = a.size();
   
@@ -5,7 +6,7 @@ void monotonic_stack(vector<ll>&a){
     stack<ll>s;
 
     fore(i,0,n){
-        while(!s.empty() && a[i] >= a[s.top()]) s.pop(); 
+        while(!s.empty() && a[s.top()] >= a[i]) s.pop(); 
         if(!s.empty()) left[i] = s.top();
         s.push(i);
     }
@@ -13,7 +14,7 @@ void monotonic_stack(vector<ll>&a){
     s = stack<ll>(); 
 
     forex(i,n,0){
-        while(!s.empty() && a[i] >= a[s.top()]) s.pop();
+        while(!s.empty() && a[s.top()] >= a[i]) s.pop();
         if(!s.empty()) right[i] = s.top();
         s.push(i);
     }
