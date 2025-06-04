@@ -1,11 +1,11 @@
 void monotonic_stack(vector<ll>&a){
     ll n = a.size();
   
-    vector<ll>left(n, -1), right(n, -1);
+    vector<ll>left(n, -1), right(n, n);
     stack<ll>s;
 
     fore(i,0,n){
-        while(!s.empty() && a[i] > a[s.top()]) s.pop(); /*a[i] > a[s.top()] / a[s.top()] > a[i]*/
+        while(!s.empty() && a[i] >= a[s.top()]) s.pop(); 
         if(!s.empty()) left[i] = s.top();
         s.push(i);
     }
@@ -13,7 +13,7 @@ void monotonic_stack(vector<ll>&a){
     s = stack<ll>(); 
 
     forex(i,n,0){
-        while(!s.empty() && a[i] > a[s.top()]) s.pop();
+        while(!s.empty() && a[i] >= a[s.top()]) s.pop();
         if(!s.empty()) right[i] = s.top();
         s.push(i);
     }
