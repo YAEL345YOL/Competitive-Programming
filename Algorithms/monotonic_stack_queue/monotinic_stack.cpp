@@ -5,7 +5,7 @@ void monotonic_stack(vector<ll>&a){
     stack<ll>s;
 
     fore(i,0,n){
-        while(!s.empty() && a[i] > a[s.top()]) s.pop();
+        while(!s.empty() && a[i] > a[s.top()]) s.pop(); /*a[i] > a[s.top()] / a[s.top()] > a[i]*/
         if(!s.empty()) left[i] = s.top();
         s.push(i);
     }
