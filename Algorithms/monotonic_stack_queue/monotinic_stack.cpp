@@ -18,5 +18,5 @@ void monotonic_stack(vector<ll>&a){
         s.push(i);
     }
 
-    fore(i,0,n) cout<<a[i]<<" "<<left[i]<<" "<<right[i]<<nl;
+    // fore(i,0,n) cout<<a[i]<<" "<<left[i]<<" "<<right[i]<<nl;
 }
