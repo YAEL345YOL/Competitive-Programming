@@ -27,9 +27,10 @@ ll solve(ll x){
             l = m + 1;
         }
         else{
-            r = r - 1;
+            r = m - 1;
         }
     }
+    
     return m;
 }
 
