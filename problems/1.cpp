@@ -43,7 +43,7 @@ int main(){
     }
     
     fore(i,1,N){
-        mem[i] += mem[i-1];
+        mem[i] += mem[i - 1];
     }
     
     // cout<<mem[N-1]-mem[N-2]<<nl;
