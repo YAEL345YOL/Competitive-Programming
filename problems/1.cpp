@@ -13,16 +13,16 @@ const int INF = 1e9;
 const ll LL_INF = 1e18;
 const int MOD = 1e9 + 7;
 
-const ll N = 100000;
+const ll N = 10001;
 
 vector<ll>mem(N);
 
-ll solve(ll x){
+ll solve(ll t){
     ll l = 0, r = N - 1, m, ans = 0;
     while(l <= r){
         m = l + (r - l) / 2;
 
-        if(x >= mem[m]){
+        if(t >= mem[m]){
             ans = m;
             l = m + 1;
         }
@@ -31,7 +31,7 @@ ll solve(ll x){
         }
     }
     
-    return m;
+    return ans;
 }
 
 int main(){
@@ -40,10 +40,13 @@ int main(){
 
     fore(i,0,N){
         mem[i] = i * (i + 1) / 2;
-        if(i > 0){
-            mem[i] += mem[i-1];
-        }
     }
+    
+    fore(i,1,N){
+        mem[i] += mem[i-1];
+    }
+    
+    // cout<<mem[N-1]-mem[N-2]<<nl;
 
     ll t;
     cin>>t;
@@ -51,9 +54,7 @@ int main(){
     while(t--){
         ll x;
         cin>>x;
-
         cout<<solve(x)<<nl;
     }
-
     return 0;
 }
